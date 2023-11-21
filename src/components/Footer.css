@@ -1,0 +1,8 @@
+#container2 {
+	padding-left: 0.5rem;
+    display: flex;
+    bottom: 0;
+	box-shadow: 0 -4px 2px -2px rgba(0,0,0,.2);
+	align-items: center;
+	justify-content: space-between;
+}

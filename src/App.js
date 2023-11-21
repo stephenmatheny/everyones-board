@@ -5,6 +5,7 @@ import Games from './pages/Games';
 import About from './pages/About';
 import NavBar from './components/NavBar';
 import NoMatch from './pages/NoMatch';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
 				<Route path="*" element={<NoMatch />} />
 			</Routes>
 		</main>
+		<Footer />
 	</>
   );
 }
