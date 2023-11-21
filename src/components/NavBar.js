@@ -6,7 +6,7 @@ import "./NavBar.css";
 const NavBar = () => {
 	return (
 		<nav>
-			<Link to="/"><img src={logo} className="navLogo"></img></Link>
+			<Link to="/"><img src={logo} alt="logo" className="navLogo"></img></Link>
 			<ul>
 				<li>
 					<NavLink to="/games" className="nav-link">Games</NavLink>
