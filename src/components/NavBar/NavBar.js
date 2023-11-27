@@ -1,20 +1,20 @@
 import React from "react";
-import logo from "../logo.svg";
+import logo from "../../logo.svg";
 import { Link, NavLink } from "react-router-dom";
 import "./NavBar.css";
 
 // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-window.onscroll = function() {scrollFunction()};
+// window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("logo").style.height = "75px";
-    // document.getElementById("logo").style.fontSize = "25px";
-  } else {
-    document.getElementById("logo").style.height = "100px";
-    // document.getElementById("logo").style.fontSize = "35px";
-  }
-}
+// function scrollFunction() {
+//   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+//     document.getElementById("logo").style.height = "75px";
+//     // document.getElementById("logo").style.fontSize = "25px";
+//   } else {
+//     document.getElementById("logo").style.height = "100px";
+//     // document.getElementById("logo").style.fontSize = "35px";
+//   }
+// }
 
 const nav_config = [
 	{
