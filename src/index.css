@@ -1,7 +1,7 @@
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
 
 @font-face {
 	font-family: "MainFont";
@@ -12,6 +12,7 @@ code {
 
 body {
   margin: 0;
+  width: 100%;
   font-family: "MainFont";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

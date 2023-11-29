@@ -32,7 +32,7 @@ const App = () => {
   return (
 	<>
 		<NavBar />
-		<main id="container">
+		<main class="main-container">
 			<Routes>
 				{routes.map((route) => (
 						<Route path={route.path} element={route.element} />

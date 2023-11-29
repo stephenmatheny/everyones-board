@@ -1,0 +1,21 @@
+@import "../../App.css";
+
+.search-main {
+    color: var(--purple);
+    font-weight: bold;
+    border-radius: 1rem;
+    justify-content: center;
+    vertical-align: top;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: .5s ease;
+}
+
+.search-main:hover {
+    -webkit-transition: transform 0.25s ease-in-out;
+    -ms-transition: transform 0.25s ease-in-out;
+    transform: scale(1.025);
+}
