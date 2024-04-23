@@ -4,6 +4,7 @@ import "./Games.css";
 import GAME_LIST from "./gameList";
 
 const Games = () => {
+
 	return (
 		<div class="games">
 			<SearchBar />

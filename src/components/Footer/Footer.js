@@ -4,8 +4,9 @@ import "./Footer.css";
 
 const Footer = () => {
 	return (
-		<main id="container2">
-            <h1>FOOTER</h1>
+		<main id="footer-container">
+            <p>COPYRIGHT © 2023 EVERYONE'S BOARD
+			<br />ALL RIGHTS RESERVED</p>
         </main>
 	);
 }

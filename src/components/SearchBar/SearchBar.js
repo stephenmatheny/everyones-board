@@ -1,9 +1,16 @@
 import "./SearchBar.css";
+import { IoSearchSharp } from "react-icons/io5";
+
 
 const SearchBar = () => {
 	return (
 		<div class="search-main">
-			Search Bar
+			<div className="search-text">
+				Search Bar
+			</div>
+			<div>
+				<IoSearchSharp />
+			</div>
 		</div>
 	)
 }

@@ -2,16 +2,20 @@
 
 nav {
 	display: flex;
+	max-height: 100px;
 	top: 0;
 	justify-content: space-between;
 	align-items: center;
 	background-color: white;
-	box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+	border-color: transparent;
+	border-bottom-color: rgba(0, 0, 0, 0.2);
+	border-style: solid;
+	font-weight: bold;
 }
 
 .navLogo {
-	height: 100px;
-	padding-left: 0.5rem;
+	width: 150px;
+	padding-left: 2rem;
 }
 
 ul {
@@ -27,7 +31,7 @@ ul li a {
 	color: var(--purple);
 	text-decoration: none;
 	padding: 0.5rem;
-	margin: 0 0.5rem;
+	margin: 0 1rem 0 0;
 }
    
 ul li a:hover {
@@ -38,6 +42,7 @@ ul li a.active {
 	color: white;
 	background-color: var(--purple);
 	box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+	border-radius: 0.25rem;
 }
 
 @media (max-width:480px) {
