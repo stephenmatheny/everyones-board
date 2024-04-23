@@ -1,0 +1,6 @@
+@import "../../App.css";
+
+.games {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,8 +1,12 @@
-#container2 {
+#footer-container {
 	padding-left: 0.5rem;
+	background-color: white;
+	border-color: transparent;
+	border-top-color: rgba(0, 0, 0, 0.2);
+	border-style: solid;
     display: flex;
     bottom: 0;
-	box-shadow: 0 -4px 2px -2px rgba(0,0,0,.2);
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
+	text-align: center;
 }
