@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.32355f35.css",
+    "main.js": "/static/js/main.781e41d3.js",
+    "static/js/453.701637cf.chunk.js": "/static/js/453.701637cf.chunk.js",
+    "static/media/Comfortaa-VariableFont_wght.ttf": "/static/media/Comfortaa-VariableFont_wght.7b8c952927af2b0deacd.ttf",
+    "static/media/logo-dark-mode.svg": "/static/media/logo-dark-mode.c6dac96d046a1296c277034da01a0e9d.svg",
+    "static/media/logo.svg": "/static/media/logo.f9d6fd47a0cb244660033035a8591642.svg",
+    "index.html": "/index.html",
+    "main.32355f35.css.map": "/static/css/main.32355f35.css.map",
+    "main.781e41d3.js.map": "/static/js/main.781e41d3.js.map",
+    "453.701637cf.chunk.js.map": "/static/js/453.701637cf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32355f35.css",
+    "static/js/main.781e41d3.js"
+  ]
+}
