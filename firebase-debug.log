@@ -1,0 +1,59 @@
+[debug] [2024-04-29T19:04:52.811Z] ----------------------------------------------------------------------
+[debug] [2024-04-29T19:04:52.813Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\smatheny\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:log
+[debug] [2024-04-29T19:04:52.813Z] CLI Version:   13.7.5
+[debug] [2024-04-29T19:04:52.813Z] Platform:      win32
+[debug] [2024-04-29T19:04:52.813Z] Node Version:  v19.8.1
+[debug] [2024-04-29T19:04:52.814Z] Time:          Mon Apr 29 2024 14:04:52 GMT-0500 (Central Daylight Time)
+[debug] [2024-04-29T19:04:52.814Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-29T19:04:52.862Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-29T19:04:52.862Z] > authorizing via signed-in user (smathenytech@gmail.com)
+[debug] [2024-04-29T19:04:52.862Z] [iam] checking project everyones-board-6ad5b for permissions ["firebase.projects.get","logging.logEntries.list","logging.logs.list"]
+[debug] [2024-04-29T19:04:52.863Z] > refreshing access token with scopes: []
+[debug] [2024-04-29T19:04:52.865Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-04-29T19:04:52.865Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-04-29T19:04:53.186Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-04-29T19:04:53.186Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-04-29T19:04:53.193Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/everyones-board-6ad5b:testIamPermissions [none]
+[debug] [2024-04-29T19:04:53.193Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/everyones-board-6ad5b:testIamPermissions x-goog-quota-user=projects/everyones-board-6ad5b
+[debug] [2024-04-29T19:04:53.193Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/everyones-board-6ad5b:testIamPermissions {"permissions":["firebase.projects.get","logging.logEntries.list","logging.logs.list"]}
+[debug] [2024-04-29T19:04:53.577Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/everyones-board-6ad5b:testIamPermissions 200
+[debug] [2024-04-29T19:04:53.578Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/everyones-board-6ad5b:testIamPermissions {"permissions":["firebase.projects.get","logging.logEntries.list","logging.logs.list"]}
+[debug] [2024-04-29T19:04:53.578Z] >>> [apiv2][query] POST https://logging.googleapis.com/v2/entries:list [none]
+[debug] [2024-04-29T19:04:53.578Z] >>> [apiv2][body] POST https://logging.googleapis.com/v2/entries:list {"resourceNames":["projects/everyones-board-6ad5b"],"filter":"resource.type=\"cloud_function\" OR (resource.type=\"cloud_run_revision\" AND labels.\"goog-managed-by\"=\"cloudfunctions\")","orderBy":"timestamp desc","pageSize":35}
+[debug] [2024-04-29T19:05:05.381Z] ----------------------------------------------------------------------
+[debug] [2024-04-29T19:05:05.383Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\smatheny\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:log
+[debug] [2024-04-29T19:05:05.383Z] CLI Version:   13.7.5
+[debug] [2024-04-29T19:05:05.383Z] Platform:      win32
+[debug] [2024-04-29T19:05:05.383Z] Node Version:  v19.8.1
+[debug] [2024-04-29T19:05:05.383Z] Time:          Mon Apr 29 2024 14:05:05 GMT-0500 (Central Daylight Time)
+[debug] [2024-04-29T19:05:05.383Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-29T19:05:05.425Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-29T19:05:05.425Z] > authorizing via signed-in user (smathenytech@gmail.com)
+[debug] [2024-04-29T19:05:05.425Z] [iam] checking project everyones-board-6ad5b for permissions ["firebase.projects.get","logging.logEntries.list","logging.logs.list"]
+[debug] [2024-04-29T19:05:05.427Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/everyones-board-6ad5b:testIamPermissions [none]
+[debug] [2024-04-29T19:05:05.427Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/everyones-board-6ad5b:testIamPermissions x-goog-quota-user=projects/everyones-board-6ad5b
+[debug] [2024-04-29T19:05:05.427Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/everyones-board-6ad5b:testIamPermissions {"permissions":["firebase.projects.get","logging.logEntries.list","logging.logs.list"]}
+[debug] [2024-04-29T19:05:05.741Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/everyones-board-6ad5b:testIamPermissions 200
+[debug] [2024-04-29T19:05:05.741Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/everyones-board-6ad5b:testIamPermissions {"permissions":["firebase.projects.get","logging.logEntries.list","logging.logs.list"]}
+[debug] [2024-04-29T19:05:05.742Z] >>> [apiv2][query] POST https://logging.googleapis.com/v2/entries:list [none]
+[debug] [2024-04-29T19:05:05.742Z] >>> [apiv2][body] POST https://logging.googleapis.com/v2/entries:list {"resourceNames":["projects/everyones-board-6ad5b"],"filter":"resource.type=\"cloud_function\" OR (resource.type=\"cloud_run_revision\" AND labels.\"goog-managed-by\"=\"cloudfunctions\")","orderBy":"timestamp desc","pageSize":35}
+[debug] [2024-04-29T19:05:38.168Z] ----------------------------------------------------------------------
+[debug] [2024-04-29T19:05:38.170Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\smatheny\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:log
+[debug] [2024-04-29T19:05:38.170Z] CLI Version:   13.7.5
+[debug] [2024-04-29T19:05:38.170Z] Platform:      win32
+[debug] [2024-04-29T19:05:38.170Z] Node Version:  v19.8.1
+[debug] [2024-04-29T19:05:38.170Z] Time:          Mon Apr 29 2024 14:05:38 GMT-0500 (Central Daylight Time)
+[debug] [2024-04-29T19:05:38.170Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-29T19:05:38.213Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-29T19:05:38.214Z] > authorizing via signed-in user (smathenytech@gmail.com)
+[debug] [2024-04-29T19:05:38.214Z] [iam] checking project everyones-board-6ad5b for permissions ["firebase.projects.get","logging.logEntries.list","logging.logs.list"]
+[debug] [2024-04-29T19:05:38.216Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/everyones-board-6ad5b:testIamPermissions [none]
+[debug] [2024-04-29T19:05:38.216Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/everyones-board-6ad5b:testIamPermissions x-goog-quota-user=projects/everyones-board-6ad5b
+[debug] [2024-04-29T19:05:38.216Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/everyones-board-6ad5b:testIamPermissions {"permissions":["firebase.projects.get","logging.logEntries.list","logging.logs.list"]}
+[debug] [2024-04-29T19:05:38.463Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/everyones-board-6ad5b:testIamPermissions 200
+[debug] [2024-04-29T19:05:38.463Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/everyones-board-6ad5b:testIamPermissions {"permissions":["firebase.projects.get","logging.logEntries.list","logging.logs.list"]}
+[debug] [2024-04-29T19:05:38.463Z] >>> [apiv2][query] POST https://logging.googleapis.com/v2/entries:list [none]
+[debug] [2024-04-29T19:05:38.464Z] >>> [apiv2][body] POST https://logging.googleapis.com/v2/entries:list {"resourceNames":["projects/everyones-board-6ad5b"],"filter":"resource.type=\"cloud_function\" OR (resource.type=\"cloud_run_revision\" AND labels.\"goog-managed-by\"=\"cloudfunctions\")","orderBy":"timestamp desc","pageSize":35}
