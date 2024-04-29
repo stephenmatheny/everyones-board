@@ -21,6 +21,7 @@ const Home = () => {
             {/* <img src={logoDarkMode} alt="dark-mode-logo" class="home-logo"></img> */}
             
             {/* <button onClick={handleClick}>Get Data</button> */}
+			HOME PAGE TEST
         </div>
     )
 }
