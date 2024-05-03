@@ -1,0 +1,741 @@
+<div class="game-header" ng-class="{ 'game-header-collapsed': geekitemctrl.state.current.name != 'geekitem.overview' }">
+    <div class="game-header-image"> <!-- ngInclude: --><ng-include src="'geekitem_module_gamebox.tpl'" class="ng-scope">
+            <div ng-controller="GeekItem_HeaderCtrl as headerctrl" class="ng-scope"> <a no-animate=""
+                    ng-show="geekitemctrl.geekitem.data.item.imagepagehref" ng-href="/image/3490053/brass-birmingham"
+                    href="/image/3490053/brass-birmingham"> <img itemprop="image" no-animate="" class="img-responsive"
+                        data-no-retina="true"
+                        ng-src="https://cf.geekdo-images.com/x3zxjr-Vw5iU4yDPg70Jgw__itemrep/img/giNUMut4HAl-zWyQkGG0YchmuLI=/fit-in/246x300/filters:strip_icc()/pic3490053.jpg"
+                        alt="Brass: Birmingham Cover Artwork"
+                        src="https://cf.geekdo-images.com/x3zxjr-Vw5iU4yDPg70Jgw__itemrep/img/giNUMut4HAl-zWyQkGG0YchmuLI=/fit-in/246x300/filters:strip_icc()/pic3490053.jpg">
+                </a> <a no-animate="" ng-show="!geekitemctrl.geekitem.data.item.imagepagehref"
+                    ui-sref="geekitem.overview" href="/boardgame/224517/brass-birmingham" class="ng-hide"> <img
+                        no-animate="" class="img-responsive" data-no-retina="true"
+                        ng-src="https://cf.geekdo-images.com/x3zxjr-Vw5iU4yDPg70Jgw__itemrep/img/giNUMut4HAl-zWyQkGG0YchmuLI=/fit-in/246x300/filters:strip_icc()/pic3490053.jpg"
+                        alt="Brass: Birmingham Cover Artwork"
+                        src="https://cf.geekdo-images.com/x3zxjr-Vw5iU4yDPg70Jgw__itemrep/img/giNUMut4HAl-zWyQkGG0YchmuLI=/fit-in/246x300/filters:strip_icc()/pic3490053.jpg">
+                </a> </div>
+        </ng-include> </div>
+    <div class="game-header-body">
+        <div class="game-header-title-container"> <flags-module geekitem="geekitemctrl.geekitem"
+                class="ng-isolate-scope"><!-- ngIf: geekitemctrl.showRanks || geekitemctrl.showClassifications -->
+                <div class="game-header-flags ng-scope"
+                    ng-if="geekitemctrl.showRanks || geekitemctrl.showClassifications">
+                    <!-- ngIf: geekitemctrl.showClassifications -->
+                    <div class="game-header-classifications hidden-game-header-collapsed ng-scope"
+                        ng-if="geekitemctrl.showClassifications">
+                        <!-- ngIf: geekitemctrl.geekitem.data.item.linkcounts.reimplements -->
+                        <div ng-if="geekitemctrl.geekitem.data.item.linkcounts.reimplements"
+                            class="game-header-subtype ng-scope"> <span
+                                class="glyphicon glyphicon-link c-orange-300"></span> Reimplements:
+                            <!-- ngRepeat: reimplements in geekitemctrl.geekitem.data.item.links.reimplements --><span
+                                ng-repeat="reimplements in geekitemctrl.geekitem.data.item.links.reimplements"
+                                class="ng-scope"> <a ng-href="/boardgame/28720/brass-lancashire" class="ng-binding"
+                                    href="/boardgame/28720/brass-lancashire">Brass: Lancashire</a><!-- ngIf: !$last -->
+                            </span><!-- end ngRepeat: reimplements in geekitemctrl.geekitem.data.item.links.reimplements -->
+                        </div><!-- end ngIf: geekitemctrl.geekitem.data.item.linkcounts.reimplements -->
+                        <!-- ngIf: geekitemctrl.geekitem.data.item.linkcounts.expandsboardgame -->
+                        <!-- ngIf: geekitemctrl.geekitem.data.item.linkcounts.reimplementation -->
+                    </div><!-- end ngIf: geekitemctrl.showClassifications --> <!-- ngIf: geekitemctrl.showRanks -->
+                    <div class="game-header-ranks hidden-game-header-collapsed ng-scope" ng-if="geekitemctrl.showRanks">
+                        <!-- ngIf: geekitemctrl.showRanks -->
+                        <div ng-if="geekitemctrl.showRanks" class="ng-scope"> <i class="fi-crown c-orange-400 fs-md"
+                                aria-hidden="true"></i> Rank:
+                            <!-- ngRepeat: rankinfo in ::geekitemctrl.geekitem.data.item.rankinfo --><!-- ngIf: (rankinfo.rank > 0) || rankinfo.rankobjecttype ==='subtype' -->
+                            <ul class="ranks ng-scope"
+                                ng-if="(rankinfo.rank > 0) || rankinfo.rankobjecttype ==='subtype'"
+                                ng-repeat="rankinfo in ::geekitemctrl.geekitem.data.item.rankinfo"
+                                title="Board Game Rank">
+                                <li class="rank"> <span class="rank-title ng-binding"> Overall </span> <span
+                                        class="rank-number"> <!-- ngIf: ::rankinfo.rank > 0 --><a
+                                            ng-if="::rankinfo.rank > 0"
+                                            ng-href="/browse/boardgame?sort=rank&amp;rankobjecttype=subtype&amp;rankobjectid=1&amp;rank=1#1"
+                                            class="rank-value ng-binding ng-scope"
+                                            href="/browse/boardgame?sort=rank&amp;rankobjecttype=subtype&amp;rankobjectid=1&amp;rank=1#1">
+                                            1 </a><!-- end ngIf: ::rankinfo.rank > 0 -->
+                                        <!-- ngIf: rankinfo.rank == 0 --> </span> </li>
+                            </ul>
+                            <!-- end ngIf: (rankinfo.rank > 0) || rankinfo.rankobjecttype ==='subtype' --><!-- end ngRepeat: rankinfo in ::geekitemctrl.geekitem.data.item.rankinfo --><!-- ngIf: (rankinfo.rank > 0) || rankinfo.rankobjecttype ==='subtype' -->
+                            <ul class="ranks ng-scope"
+                                ng-if="(rankinfo.rank > 0) || rankinfo.rankobjecttype ==='subtype'"
+                                ng-repeat="rankinfo in ::geekitemctrl.geekitem.data.item.rankinfo"
+                                title="Strategy Game Rank">
+                                <li class="rank"> <span class="rank-title ng-binding"> Strategy </span> <span
+                                        class="rank-number"> <!-- ngIf: ::rankinfo.rank > 0 --><a
+                                            ng-if="::rankinfo.rank > 0"
+                                            ng-href="strategygames/browse/boardgame?sort=rank&amp;rankobjecttype=family&amp;rankobjectid=5497&amp;rank=1#1"
+                                            class="rank-value ng-binding ng-scope"
+                                            href="strategygames/browse/boardgame?sort=rank&amp;rankobjecttype=family&amp;rankobjectid=5497&amp;rank=1#1">
+                                            1 </a><!-- end ngIf: ::rankinfo.rank > 0 -->
+                                        <!-- ngIf: rankinfo.rank == 0 --> </span> </li>
+                            </ul>
+                            <!-- end ngIf: (rankinfo.rank > 0) || rankinfo.rankobjecttype ==='subtype' --><!-- end ngRepeat: rankinfo in ::geekitemctrl.geekitem.data.item.rankinfo -->
+                        </div><!-- end ngIf: geekitemctrl.showRanks -->
+                    </div><!-- end ngIf: geekitemctrl.showRanks -->
+                </div><!-- end ngIf: geekitemctrl.showRanks || geekitemctrl.showClassifications -->
+            </flags-module>
+            <div class="game-header-title">
+                <div class="game-header-title-rating"> <overall-rating item="geekitemctrl.geekitem.data.item"
+                        class="ng-isolate-scope">
+                        <div class="rating-overall"
+                            ng-attr-itemprop="{{item.stats.usersrated > 0  ? 'aggregateRating' : undefined}}"
+                            ng-attr-itemscope="{{item.stats.usersrated > 0 ? '' : undefined}}"
+                            ng-attr-itemtype="{{item.stats.usersrated > 0 ? 'https://schema.org/AggregateRating' : undefined}}"
+                            itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating">
+                            <!-- ngIf: item.stats.usersrated > 0 -->
+                            <meta ng-if="item.stats.usersrated > 0" itemprop="reviewCount"
+                                ng-attr-content="{{item.stats.usersrated}}" class="ng-scope" content="44926">
+                            <!-- end ngIf: item.stats.usersrated > 0 --> <!-- ngIf: item.stats.usersrated > 0 -->
+                            <meta ng-if="item.stats.usersrated > 0" itemprop="bestRating" content="10" class="ng-scope">
+                            <!-- end ngIf: item.stats.usersrated > 0 --> <!-- ngIf: item.stats.usersrated > 0 -->
+                            <meta ng-if="item.stats.usersrated > 0" itemprop="worstRating" content="1" class="ng-scope">
+                            <!-- end ngIf: item.stats.usersrated > 0 -->
+                            <div class="rating-overall-callout-container"> <a
+                                    class="rating-angular rating-xl rating-overall-callout has-rating-8"
+                                    ng-class="::ratingClass" uib-tooltip="Average Rating - Click for Breakdown"
+                                    tooltip-append-to-body="true"
+                                    ui-sref="geekitem.ratings({rated:1,comment:1,status:'',rating:''})"
+                                    href="/boardgame/224517/brass-birmingham/ratings?rated=1&amp;comment=1"> <span
+                                        ng-attr-itemprop="{{item.stats.usersrated > 0 ? 'ratingValue' : undefined}}"
+                                        ng-show="showRating"
+                                        ng-attr-content="{{item.stats.usersrated > 0 ? item.stats.average: undefined}}"
+                                        class="ng-binding" itemprop="ratingValue" content="8.59857"> 8.6 </span> <span
+                                        ng-show="!showRating" class="ng-hide"> -- </span> </a> </div>
+                        </div>
+                    </overall-rating> </div>
+                <div class="game-header-title-info">
+                    <h1> <a ui-sref="geekitem.overview" ng-href="/boardgame/224517/brass-birmingham"
+                            href="/boardgame/224517/brass-birmingham"> <span itemprop="name" class="ng-binding">Brass:
+                                Birmingham</span> </a>
+                        <!-- ngIf: geekitemctrl.geekitem.data.item.yearpublished && geekitemctrl.geekitem.data.item.yearpublished !=="0" --><span
+                            ng-if="geekitemctrl.geekitem.data.item.yearpublished &amp;&amp; geekitemctrl.geekitem.data.item.yearpublished !==&quot;0&quot;"
+                            class="game-year ng-binding ng-scope"> (2018)
+                        </span><!-- end ngIf: geekitemctrl.geekitem.data.item.yearpublished && geekitemctrl.geekitem.data.item.yearpublished !=="0" -->
+                    </h1> <!-- ngIf: ::geekitemctrl.geekitem.data.item.short_description -->
+                    <p ng-if="::geekitemctrl.geekitem.data.item.short_description" class="ng-scope"><span
+                            itemprop="description" class="ng-binding">Build networks, grow industries, and navigate the
+                            world of the Industrial Revolution.</span> <button login-required=""
+                            geekitem-edit-short-description-button="" class="short-description-edit-btn btn btn-link"
+                            aria-label="Edit Description" title="Edit Description"> <i class="fi-pencil"></i> </button>
+                    </p><!-- end ngIf: ::geekitemctrl.geekitem.data.item.short_description -->
+                    <!-- ngIf: !geekitemctrl.geekitem.data.item.short_description && geekitemctrl.geekitem.data.item.hasOwnProperty('short_description') -->
+                    <ul class="game-header-title-summary" ng-show="geekitemctrl.geekitem.loaded">
+                        <li> <a ui-sref="geekitem.ratings({rated:1,comment:'',status:''})" class="ng-binding"
+                                href="/boardgame/224517/brass-birmingham/ratings?rated=1"> 45K Rating<span
+                                    ng-hide="geekitemctrl.geekitem.data.item.stats.usersrated == 1">s</span> </a> &amp;
+                            <a ui-sref="geekitem.ratings({comment:1,rated:'',status:''})" class="ng-binding"
+                                href="/boardgame/224517/brass-birmingham/ratings?comment=1"> 6.2K Comment<span
+                                    ng-hide="geekitemctrl.geekitem.data.item.stats.numcomments == 1">s</span> </a>
+                            <!-- ngIf: geekitemctrl.geekitem.data.item.show_geekbuddy_analysis --><span
+                                ng-if="geekitemctrl.geekitem.data.item.show_geekbuddy_analysis" class="ng-scope"> · <a
+                                    ng-href="/geekbuddy/analyze/thing/224517" href="/geekbuddy/analyze/thing/224517">
+                                    GeekBuddy Analysis </a>
+                            </span><!-- end ngIf: geekitemctrl.geekitem.data.item.show_geekbuddy_analysis --> </li>
+                    </ul>
+                </div>
+            </div>
+        </div> <!-- ngIf: !['puzzle','rpgitem'].includes(geekitemctrl.geekitem.geekitem.subtype) -->
+        <div ng-if="!['puzzle','rpgitem'].includes(geekitemctrl.geekitem.geekitem.subtype)"
+            class="game-header-gameplay hidden-game-header-collapsed ng-scope"> <gameplay-module
+                geekitem="geekitemctrl.geekitem" class="ng-isolate-scope"><!-- ngIf: geekitemctrl.geekitem.loaded -->
+                <div class="panel panel-bottom ng-scope" ng-if="geekitemctrl.geekitem.loaded">
+                    <div class="panel-body">
+                        <h2 class="sr-only"> Gameplay </h2>
+                        <ul class="gameplay">
+                            <li class="gameplay-item" itemscope="" itemprop="numberOfPlayers"
+                                itemtype="https://schema.org/QuantitativeValue">
+                                <div class="gameplay-item-primary">
+                                    <!-- ngIf: ::geekitemctrl.geekitem.data.item.minplayers > 0 -->
+                                    <meta ng-if="::geekitemctrl.geekitem.data.item.minplayers > 0" itemprop="minValue"
+                                        ng-attr-content="{{geekitemctrl.geekitem.data.item.minplayers}}"
+                                        class="ng-scope" content="2">
+                                    <!-- end ngIf: ::geekitemctrl.geekitem.data.item.minplayers > 0 -->
+                                    <!-- ngIf: ::geekitemctrl.geekitem.data.item.maxplayers > 0 -->
+                                    <meta ng-if="::geekitemctrl.geekitem.data.item.maxplayers > 0" itemprop="maxValue"
+                                        ng-attr-content="{{geekitemctrl.geekitem.data.item.maxplayers}}"
+                                        class="ng-scope" content="4">
+                                    <!-- end ngIf: ::geekitemctrl.geekitem.data.item.maxplayers > 0 -->
+                                    <!-- ngIf: ::geekitemctrl.geekitem.data.item.minplayers > 0 || geekitemctrl.geekitem.data.item.maxplayers > 0 --><span
+                                        ng-if="::geekitemctrl.geekitem.data.item.minplayers > 0 || geekitemctrl.geekitem.data.item.maxplayers > 0"
+                                        min="::geekitemctrl.geekitem.data.item.minplayers"
+                                        max="::geekitemctrl.geekitem.data.item.maxplayers"
+                                        class="ng-scope ng-isolate-scope"> <!-- ngIf: min > 0 --><span ng-if="min > 0"
+                                            class="ng-binding ng-scope">2</span><!-- end ngIf: min > 0 --><!-- ngIf: max>0 && min != max --><span
+                                            ng-if="max>0 &amp;&amp; min != max"
+                                            class="ng-binding ng-scope"><!-- ngIf: min>0 --><span ng-if="min>0"
+                                                class="ng-binding ng-scope">–</span><!-- end ngIf: min>0 -->4</span><!-- end ngIf: max>0 && min != max -->
+                                    </span><!-- end ngIf: ::geekitemctrl.geekitem.data.item.minplayers > 0 || geekitemctrl.geekitem.data.item.maxplayers > 0 -->
+                                    Players
+                                </div>
+                                <div class="gameplay-item-secondary"> <span item-poll-button="numplayers"
+                                        poll-view="results" class="ng-isolate-scope"> <button type="button"
+                                            class="btn btn-link btn-xs" uib-tooltip="View poll and results"
+                                            tooltip-popup-delay="500" tooltip-append-to-body="true"> Community: <span
+                                                ng-show="::geekitemctrl.geekitem.data.item.polls.userplayers.totalvotes == 0"
+                                                class="ng-hide"> (no votes) </span> <span
+                                                ng-show="::geekitemctrl.geekitem.data.item.polls.userplayers.totalvotes > 0"
+                                                class="ng-binding"> 2–4 </span> <span
+                                                ng-show="::geekitemctrl.geekitem.data.item.polls.userplayers.totalvotes > 0"
+                                                class="ng-binding"> — Best: 3–4 </span> </button> </span> </div>
+                            </li>
+                            <li class="gameplay-item">
+                                <div class="gameplay-item-primary">
+                                    <!-- ngIf: ::!geekitemctrl.geekitem.data.item.minplaytime || geekitemctrl.geekitem.data.item.minplaytime <= 0 && geekitemctrl.geekitem.data.item.maxplaytime <= 0 -->
+                                    <!-- ngIf: ::geekitemctrl.geekitem.data.item.minplaytime > 0 || geekitemctrl.geekitem.data.item.maxplaytime > 0 --><span
+                                        ng-if="::geekitemctrl.geekitem.data.item.minplaytime > 0 || geekitemctrl.geekitem.data.item.maxplaytime > 0"
+                                        class="ng-scope"> <span min="::geekitemctrl.geekitem.data.item.minplaytime"
+                                            max="::geekitemctrl.geekitem.data.item.maxplaytime"
+                                            class="ng-isolate-scope"> <!-- ngIf: min > 0 --><span ng-if="min > 0"
+                                                class="ng-binding ng-scope">60</span><!-- end ngIf: min > 0 --><!-- ngIf: max>0 && min != max --><span
+                                                ng-if="max>0 &amp;&amp; min != max"
+                                                class="ng-binding ng-scope"><!-- ngIf: min>0 --><span ng-if="min>0"
+                                                    class="ng-binding ng-scope">–</span><!-- end ngIf: min>0 -->120</span><!-- end ngIf: max>0 && min != max -->
+                                        </span> Min
+                                    </span><!-- end ngIf: ::geekitemctrl.geekitem.data.item.minplaytime > 0 || geekitemctrl.geekitem.data.item.maxplaytime > 0 -->
+                                </div>
+                                <div class="gameplay-item-secondary">
+                                    <!-- ngIf: ::geekitemctrl.geekitem.data.item.minplaytime > 0 || geekitemctrl.geekitem.data.item.maxplaytime > 0 -->
+                                    <div ng-if="::geekitemctrl.geekitem.data.item.minplaytime > 0 || geekitemctrl.geekitem.data.item.maxplaytime > 0"
+                                        class="ng-scope"> Playing Time </div>
+                                    <!-- end ngIf: ::geekitemctrl.geekitem.data.item.minplaytime > 0 || geekitemctrl.geekitem.data.item.maxplaytime > 0 -->
+                                    <!-- ngIf: ::!geekitemctrl.geekitem.data.item.minplaytime || geekitemctrl.geekitem.data.item.minplaytime <= 0 && geekitemctrl.geekitem.data.item.maxplaytime <= 0 -->
+                                </div>
+                            </li>
+                            <li class="gameplay-item" itemscope="" itemprop="audience"
+                                itemtype="https://schema.org/PeopleAudience">
+                                <div class="gameplay-item-primary"> Age:
+                                    <!-- ngIf: ::geekitemctrl.geekitem.data.item.minage == 0 -->
+                                    <!-- ngIf: ::geekitemctrl.geekitem.data.item.minage > 0 --><span
+                                        ng-if="::geekitemctrl.geekitem.data.item.minage > 0" class="ng-scope"> <span
+                                            itemprop="suggestedMinAge" class="ng-binding">14</span>+
+                                    </span><!-- end ngIf: ::geekitemctrl.geekitem.data.item.minage > 0 --> </div>
+                                <div class="gameplay-item-secondary">
+                                    <!-- ngIf: ::geekitemctrl.geekitem.data.item.minage == 0 --> <span
+                                        item-poll-button="playerage" poll-view="results" class="ng-isolate-scope">
+                                        <button class="btn btn-link btn-xs" uib-tooltip="View poll and results"
+                                            tooltip-popup-delay="500" tooltip-append-to-body="true"> Community: <span
+                                                ng-bind-html="geekitemctrl.geekitem.data.item.polls.playerage|to_trusted"
+                                                class="ng-binding">14+</span> </button> </span> </div>
+                            </li>
+                            <li class="gameplay-item">
+                                <div class="gameplay-item-primary"> Weight: <span
+                                        ng-show="geekitemctrl.geekitem.data.item.stats.numweights == 0" class="ng-hide">
+                                        –– </span> <span ng-show="geekitemctrl.geekitem.data.item.stats.numweights > 0"
+                                        item-poll-button="boardgameweight" poll-view="results" class="ng-isolate-scope">
+                                        <span
+                                            ng-class="{'gameplay-weight-light': geekitemctrl.geekitem.data.item.stats.avgweight <= 3, 'gameplay-weight-medium': geekitemctrl.geekitem.data.item.stats.avgweight > 3,'gameplay-weight-heavy': geekitemctrl.geekitem.data.item.stats.avgweight > 4 }"
+                                            class="ng-binding gameplay-weight-medium"> 3.88 </span> / 5 <span
+                                            class="sr-only">Complexity Rating</span> </span> </div>
+                                <div class="gameplay-item-secondary"> <span item-poll-button="boardgameweight"
+                                        poll-view="results" class="ng-isolate-scope"> <button type="button"
+                                            class="btn btn-xs btn-link" uib-tooltip="View results"
+                                            tooltip-popup-delay="500" tooltip-append-to-body="true"> 'Complexity' Rating
+                                            <span class="sr-only">Results</span> </button> </span> <a
+                                        class="btn btn-empty" href="/wiki/page/Weight"
+                                        uib-tooltip="Community rating for how difficult a game is to understand. Lower rating (lighter weight) means easier."
+                                        tooltip-append-to-body="true" tooltip-placement="bottom-right"
+                                        tooltip-class="tooltip-lg"><span
+                                            class="glyphicon glyphicon-question-sign fs-xs"></span> <span
+                                            class="sr-only">Learn more about complexity ratings</span> </a> </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- end ngIf: geekitemctrl.geekitem.loaded -->
+            </gameplay-module> </div>
+        <!-- end ngIf: !['puzzle','rpgitem'].includes(geekitemctrl.geekitem.geekitem.subtype) -->
+        <div class="game-header-credits hidden-game-header-collapsed"> <!-- ngInclude: --><ng-include
+                src="'geekitem_module_credits.tpl'" class="ng-scope">
+                <div class="credits ng-scope">
+                    <ul> <!-- ngIf: geekitemctrl.geekitem.data.item.secondarynamescount -->
+                        <!-- ngIf: !geekitemctrl.geekitem.data.item.secondarynamescount && geekitemctrl.geekitem.data.item.alternatenamescount && geekitemctrl.geekitem.data.item.alternatenames.length -->
+                        <li ng-if="!geekitemctrl.geekitem.data.item.secondarynamescount &amp;&amp; geekitemctrl.geekitem.data.item.alternatenamescount &amp;&amp; geekitemctrl.geekitem.data.item.alternatenames.length"
+                            class="ng-scope"> <strong>Alternate Names</strong> <span> <a ui-sref="geekitem.overview"
+                                    ng-href="/boardgame/224517/brass-birmingham"
+                                    href="/boardgame/224517/brass-birmingham"> <span itemprop="alternateName"
+                                        class="ng-binding">Brass. Бирмингем</span> </a> </span> <a
+                                ui-sref="geekitem.credits({'#':'alternatename'})"
+                                ng-show="geekitemctrl.geekitem.data.item.alternatenamescount > 1" class="ng-binding"
+                                href="/boardgame/224517/brass-birmingham/credits#alternatename">+ 5 more</a> </li>
+                        <!-- end ngIf: !geekitemctrl.geekitem.data.item.secondarynamescount && geekitemctrl.geekitem.data.item.alternatenamescount && geekitemctrl.geekitem.data.item.alternatenames.length -->
+                        <!-- ngRepeat: st in geekitemctrl.geekitem.data.item.credit_subtypes|filter:{linktype: geekitemctrl.geekitem.data.item.linkcounts}:geekitemctrl.filterCreditSubtypesCompare -->
+                        <li ng-repeat="st in geekitemctrl.geekitem.data.item.credit_subtypes|filter:{linktype: geekitemctrl.geekitem.data.item.linkcounts}:geekitemctrl.filterCreditSubtypesCompare"
+                            class="ng-scope"> <strong class="ng-binding">Designer</strong> <popup-list
+                                items="geekitemctrl.geekitem.data.item.links[st.linktype]"
+                                numitems="geekitemctrl.geekitem.data.item.linkcounts[st.linktype]"
+                                sref="geekitem.credits({'#':st.linktype})" itemsinline="true"
+                                loaded="geekitemctrl.geekitem.loaded" action="geekitemctrl.showFullCredits"
+                                schema="st.schema" showcount="4" class="ng-isolate-scope"><span
+                                    ng-show="loaded &amp;&amp; !numitems" class="ng-hide">N/A</span>
+                                <!-- ngRepeat: item in items|limitTo: listshowcount --><span
+                                    ng-repeat="item in items|limitTo: listshowcount"
+                                    ng-attr-itemscope="{{schema &amp;&amp; true || undefined}}"
+                                    ng-attr-itemtype="{{schema.itemtype}}" ng-attr-itemprop="{{schema.itemprop}}"
+                                    ng-attr-itemid="{{schema &amp;&amp; item.canonical_link}}" class="ng-scope"
+                                    itemscope="true" itemtype="https://schema.org/Person" itemprop="creator"
+                                    itemid="https://boardgamegeek.com/boardgamedesigner/32887/gavan-brown"> <a
+                                        ng-attr-itemprop="{{schema &amp;&amp; 'url'}}"
+                                        ng-attr-content="{{schema &amp;&amp; item.canonical_link}}" title="Gavan Brown"
+                                        href="/boardgamedesigner/32887/gavan-brown" itemprop="url"
+                                        content="https://boardgamegeek.com/boardgamedesigner/32887/gavan-brown"><span
+                                            ng-attr-itemprop="{{schema &amp;&amp; 'name'}}" class="ng-binding"
+                                            itemprop="name">Gavan Brown</span></a><!-- ngIf: !$last --><span
+                                        ng-if="!$last" class="ng-scope">, </span><!-- end ngIf: !$last -->
+                                </span><!-- end ngRepeat: item in items|limitTo: listshowcount --><span
+                                    ng-repeat="item in items|limitTo: listshowcount"
+                                    ng-attr-itemscope="{{schema &amp;&amp; true || undefined}}"
+                                    ng-attr-itemtype="{{schema.itemtype}}" ng-attr-itemprop="{{schema.itemprop}}"
+                                    ng-attr-itemid="{{schema &amp;&amp; item.canonical_link}}" class="ng-scope"
+                                    itemscope="true" itemtype="https://schema.org/Person" itemprop="creator"
+                                    itemid="https://boardgamegeek.com/boardgamedesigner/32943/matt-tolman"> <a
+                                        ng-attr-itemprop="{{schema &amp;&amp; 'url'}}"
+                                        ng-attr-content="{{schema &amp;&amp; item.canonical_link}}" title="Matt Tolman"
+                                        href="/boardgamedesigner/32943/matt-tolman" itemprop="url"
+                                        content="https://boardgamegeek.com/boardgamedesigner/32943/matt-tolman"><span
+                                            ng-attr-itemprop="{{schema &amp;&amp; 'name'}}" class="ng-binding"
+                                            itemprop="name">Matt Tolman</span></a><!-- ngIf: !$last --><span
+                                        ng-if="!$last" class="ng-scope">, </span><!-- end ngIf: !$last -->
+                                </span><!-- end ngRepeat: item in items|limitTo: listshowcount --><span
+                                    ng-repeat="item in items|limitTo: listshowcount"
+                                    ng-attr-itemscope="{{schema &amp;&amp; true || undefined}}"
+                                    ng-attr-itemtype="{{schema.itemtype}}" ng-attr-itemprop="{{schema.itemprop}}"
+                                    ng-attr-itemid="{{schema &amp;&amp; item.canonical_link}}" class="ng-scope"
+                                    itemscope="true" itemtype="https://schema.org/Person" itemprop="creator"
+                                    itemid="https://boardgamegeek.com/boardgamedesigner/6/martin-wallace"> <a
+                                        ng-attr-itemprop="{{schema &amp;&amp; 'url'}}"
+                                        ng-attr-content="{{schema &amp;&amp; item.canonical_link}}"
+                                        title="Martin Wallace" href="/boardgamedesigner/6/martin-wallace" itemprop="url"
+                                        content="https://boardgamegeek.com/boardgamedesigner/6/martin-wallace"><span
+                                            ng-attr-itemprop="{{schema &amp;&amp; 'name'}}" class="ng-binding"
+                                            itemprop="name">Martin Wallace</span></a><!-- ngIf: !$last -->
+                                </span><!-- end ngRepeat: item in items|limitTo: listshowcount --> <a
+                                    ui-sref="geekitem.credits({'#':st.linktype})" ng-show="::showmore"
+                                    class="ng-binding ng-hide" href="/boardgame/224517/brass-birmingham/credits"> +
+                                    0<span> more</span> </a> </popup-list> </li>
+                        <!-- end ngRepeat: st in geekitemctrl.geekitem.data.item.credit_subtypes|filter:{linktype: geekitemctrl.geekitem.data.item.linkcounts}:geekitemctrl.filterCreditSubtypesCompare -->
+                        <li ng-repeat="st in geekitemctrl.geekitem.data.item.credit_subtypes|filter:{linktype: geekitemctrl.geekitem.data.item.linkcounts}:geekitemctrl.filterCreditSubtypesCompare"
+                            class="ng-scope"> <strong class="ng-binding">Artist</strong> <popup-list
+                                items="geekitemctrl.geekitem.data.item.links[st.linktype]"
+                                numitems="geekitemctrl.geekitem.data.item.linkcounts[st.linktype]"
+                                sref="geekitem.credits({'#':st.linktype})" itemsinline="true"
+                                loaded="geekitemctrl.geekitem.loaded" action="geekitemctrl.showFullCredits"
+                                schema="st.schema" showcount="4" class="ng-isolate-scope"><span
+                                    ng-show="loaded &amp;&amp; !numitems" class="ng-hide">N/A</span>
+                                <!-- ngRepeat: item in items|limitTo: listshowcount --><span
+                                    ng-repeat="item in items|limitTo: listshowcount"
+                                    ng-attr-itemscope="{{schema &amp;&amp; true || undefined}}"
+                                    ng-attr-itemtype="{{schema.itemtype}}" ng-attr-itemprop="{{schema.itemprop}}"
+                                    ng-attr-itemid="{{schema &amp;&amp; item.canonical_link}}" class="ng-scope"> <a
+                                        ng-attr-itemprop="{{schema &amp;&amp; 'url'}}"
+                                        ng-attr-content="{{schema &amp;&amp; item.canonical_link}}" title="Gavan Brown"
+                                        href="/boardgameartist/32887/gavan-brown"><span
+                                            ng-attr-itemprop="{{schema &amp;&amp; 'name'}}" class="ng-binding">Gavan
+                                            Brown</span></a><!-- ngIf: !$last --><span ng-if="!$last" class="ng-scope">,
+                                    </span><!-- end ngIf: !$last -->
+                                </span><!-- end ngRepeat: item in items|limitTo: listshowcount --><span
+                                    ng-repeat="item in items|limitTo: listshowcount"
+                                    ng-attr-itemscope="{{schema &amp;&amp; true || undefined}}"
+                                    ng-attr-itemtype="{{schema.itemtype}}" ng-attr-itemprop="{{schema.itemprop}}"
+                                    ng-attr-itemid="{{schema &amp;&amp; item.canonical_link}}" class="ng-scope"> <a
+                                        ng-attr-itemprop="{{schema &amp;&amp; 'url'}}"
+                                        ng-attr-content="{{schema &amp;&amp; item.canonical_link}}"
+                                        title="Lina Cossette" href="/boardgameartist/70571/lina-cossette"><span
+                                            ng-attr-itemprop="{{schema &amp;&amp; 'name'}}" class="ng-binding">Lina
+                                            Cossette</span></a><!-- ngIf: !$last --><span ng-if="!$last"
+                                        class="ng-scope">, </span><!-- end ngIf: !$last -->
+                                </span><!-- end ngRepeat: item in items|limitTo: listshowcount --><span
+                                    ng-repeat="item in items|limitTo: listshowcount"
+                                    ng-attr-itemscope="{{schema &amp;&amp; true || undefined}}"
+                                    ng-attr-itemtype="{{schema.itemtype}}" ng-attr-itemprop="{{schema.itemprop}}"
+                                    ng-attr-itemid="{{schema &amp;&amp; item.canonical_link}}" class="ng-scope"> <a
+                                        ng-attr-itemprop="{{schema &amp;&amp; 'url'}}"
+                                        ng-attr-content="{{schema &amp;&amp; item.canonical_link}}" title="David Forest"
+                                        href="/boardgameartist/70568/david-forest"><span
+                                            ng-attr-itemprop="{{schema &amp;&amp; 'name'}}" class="ng-binding">David
+                                            Forest</span></a><!-- ngIf: !$last --><span ng-if="!$last"
+                                        class="ng-scope">, </span><!-- end ngIf: !$last -->
+                                </span><!-- end ngRepeat: item in items|limitTo: listshowcount --><span
+                                    ng-repeat="item in items|limitTo: listshowcount"
+                                    ng-attr-itemscope="{{schema &amp;&amp; true || undefined}}"
+                                    ng-attr-itemtype="{{schema.itemtype}}" ng-attr-itemprop="{{schema.itemprop}}"
+                                    ng-attr-itemid="{{schema &amp;&amp; item.canonical_link}}" class="ng-scope"> <a
+                                        ng-attr-itemprop="{{schema &amp;&amp; 'url'}}"
+                                        ng-attr-content="{{schema &amp;&amp; item.canonical_link}}"
+                                        title="Damien Mammoliti" href="/boardgameartist/38179/damien-mammoliti"><span
+                                            ng-attr-itemprop="{{schema &amp;&amp; 'name'}}" class="ng-binding">Damien
+                                            Mammoliti</span></a><!-- ngIf: !$last --><span ng-if="!$last"
+                                        class="ng-scope">, </span><!-- end ngIf: !$last -->
+                                </span><!-- end ngRepeat: item in items|limitTo: listshowcount --><span
+                                    ng-repeat="item in items|limitTo: listshowcount"
+                                    ng-attr-itemscope="{{schema &amp;&amp; true || undefined}}"
+                                    ng-attr-itemtype="{{schema.itemtype}}" ng-attr-itemprop="{{schema.itemprop}}"
+                                    ng-attr-itemid="{{schema &amp;&amp; item.canonical_link}}" class="ng-scope"> <a
+                                        ng-attr-itemprop="{{schema &amp;&amp; 'url'}}"
+                                        ng-attr-content="{{schema &amp;&amp; item.canonical_link}}" title="Matt Tolman"
+                                        href="/boardgameartist/32943/matt-tolman"><span
+                                            ng-attr-itemprop="{{schema &amp;&amp; 'name'}}" class="ng-binding">Matt
+                                            Tolman</span></a><!-- ngIf: !$last -->
+                                </span><!-- end ngRepeat: item in items|limitTo: listshowcount --> <a
+                                    ui-sref="geekitem.credits({'#':st.linktype})" ng-show="::showmore"
+                                    class="ng-binding ng-hide" href="/boardgame/224517/brass-birmingham/credits"> +
+                                    0<span> more</span> </a> </popup-list> </li>
+                        <!-- end ngRepeat: st in geekitemctrl.geekitem.data.item.credit_subtypes|filter:{linktype: geekitemctrl.geekitem.data.item.linkcounts}:geekitemctrl.filterCreditSubtypesCompare -->
+                        <li ng-repeat="st in geekitemctrl.geekitem.data.item.credit_subtypes|filter:{linktype: geekitemctrl.geekitem.data.item.linkcounts}:geekitemctrl.filterCreditSubtypesCompare"
+                            class="ng-scope"> <strong class="ng-binding">Publisher</strong> <popup-list
+                                items="geekitemctrl.geekitem.data.item.links[st.linktype]"
+                                numitems="geekitemctrl.geekitem.data.item.linkcounts[st.linktype]"
+                                sref="geekitem.credits({'#':st.linktype})" itemsinline="true"
+                                loaded="geekitemctrl.geekitem.loaded" action="geekitemctrl.showFullCredits"
+                                schema="st.schema" showcount="4" class="ng-isolate-scope"><span
+                                    ng-show="loaded &amp;&amp; !numitems" class="ng-hide">N/A</span>
+                                <!-- ngRepeat: item in items|limitTo: listshowcount --><span
+                                    ng-repeat="item in items|limitTo: listshowcount"
+                                    ng-attr-itemscope="{{schema &amp;&amp; true || undefined}}"
+                                    ng-attr-itemtype="{{schema.itemtype}}" ng-attr-itemprop="{{schema.itemprop}}"
+                                    ng-attr-itemid="{{schema &amp;&amp; item.canonical_link}}" class="ng-scope"
+                                    itemscope="true" itemtype="https://schema.org/Organization" itemprop="publisher"
+                                    itemid="https://boardgamegeek.com/boardgamepublisher/21765/roxley"> <a
+                                        ng-attr-itemprop="{{schema &amp;&amp; 'url'}}"
+                                        ng-attr-content="{{schema &amp;&amp; item.canonical_link}}" title="Roxley"
+                                        href="/boardgamepublisher/21765/roxley" itemprop="url"
+                                        content="https://boardgamegeek.com/boardgamepublisher/21765/roxley"><span
+                                            ng-attr-itemprop="{{schema &amp;&amp; 'name'}}" class="ng-binding"
+                                            itemprop="name">Roxley</span></a><!-- ngIf: !$last -->
+                                </span><!-- end ngRepeat: item in items|limitTo: listshowcount --> <a
+                                    ui-sref="geekitem.credits({'#':st.linktype})" ng-show="::showmore"
+                                    class="ng-binding" href="/boardgame/224517/brass-birmingham/credits"> + 19<span>
+                                        more</span> </a> </popup-list> </li>
+                        <!-- end ngRepeat: st in geekitemctrl.geekitem.data.item.credit_subtypes|filter:{linktype: geekitemctrl.geekitem.data.item.linkcounts}:geekitemctrl.filterCreditSubtypesCompare -->
+                    </ul> <!-- ngIf: geekitemctrl.geekitem.loaded -->
+                    <div class="credits-cta ng-scope" ng-if="geekitemctrl.geekitem.loaded"> <a
+                            ui-sref="geekitem.credits" href="/boardgame/224517/brass-birmingham/credits"> See Full
+                            Credits </a> </div><!-- end ngIf: geekitemctrl.geekitem.loaded -->
+                </div>
+            </ng-include> </div>
+        <div class="game-header-primary-actions hidden-game-header-collapsed"> <span class="hidden-xs">
+                <div class="game-rating-container ng-isolate-scope"
+                    item="{objecttype: geekitemctrl.geekitemParams.objecttype,   										      objectid: geekitemctrl.geekitemParams.objectid}"
+                    layout="desktop">
+                    <div ng-class="::{'is-rated':   collratingctrl.collection.ratingitem.rating, 			  		  'is-unrated': !collratingctrl.collection.ratingitem.rating }"
+                        class="rating-stars-container is-unrated">
+                        <div class="rating-stars-title"> My rating <span
+                                ng-show="collratingctrl.collection.ratingitem.rating" class="ng-hide"> · <button
+                                    class="btn btn-xs btn-empty"
+                                    ng-click="collratingctrl.editItem( { collid: collratingctrl.collection.ratingitem.collid } )">
+                                    Edit </button> </span> </div> <span class="rating-stars rating-stars-sm"> <span
+                                uib-rating="" ng-model="collratingctrl.collection.ratingitem.rating"
+                                readonly="collratingctrl.loading" ng-click="collratingctrl.editItemRating()"
+                                login-required="" max="10" state-on="'fi-star is-active'" state-off="'fi-star'"
+                                titles="collratingctrl.ratingDescriptions"
+                                class="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-not-empty"><span
+                                    ng-mouseleave="reset()" ng-keydown="onKeydown($event)" tabindex="0" role="slider"
+                                    aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" aria-valuetext="Unrated">
+                                    <!-- ngRepeat: r in range track by $index --><span
+                                        ng-repeat-start="r in range track by $index"
+                                        class="sr-only ng-binding ng-scope">( )</span>
+                                    <i ng-repeat-end="" ng-mouseenter="enter($index + 1)" ng-click="rate($index + 1)"
+                                        class="glyphicon ng-scope fi-star"
+                                        ng-class="$index < value &amp;&amp; (r.stateOn || 'glyphicon-star') || (r.stateOff || 'glyphicon-star-empty')"
+                                        ng-attr-title="{{r.title}}"
+                                        title="Awful - defies game description."></i><!-- end ngRepeat: r in range track by $index --><span
+                                        ng-repeat-start="r in range track by $index"
+                                        class="sr-only ng-binding ng-scope">( )</span>
+                                    <i ng-repeat-end="" ng-mouseenter="enter($index + 1)" ng-click="rate($index + 1)"
+                                        class="glyphicon ng-scope fi-star"
+                                        ng-class="$index < value &amp;&amp; (r.stateOn || 'glyphicon-star') || (r.stateOff || 'glyphicon-star-empty')"
+                                        ng-attr-title="{{r.title}}"
+                                        title="Very bad - won’t play ever again."></i><!-- end ngRepeat: r in range track by $index --><span
+                                        ng-repeat-start="r in range track by $index"
+                                        class="sr-only ng-binding ng-scope">( )</span>
+                                    <i ng-repeat-end="" ng-mouseenter="enter($index + 1)" ng-click="rate($index + 1)"
+                                        class="glyphicon ng-scope fi-star"
+                                        ng-class="$index < value &amp;&amp; (r.stateOn || 'glyphicon-star') || (r.stateOff || 'glyphicon-star-empty')"
+                                        ng-attr-title="{{r.title}}"
+                                        title="Bad - likely won’t play this again."></i><!-- end ngRepeat: r in range track by $index --><span
+                                        ng-repeat-start="r in range track by $index"
+                                        class="sr-only ng-binding ng-scope">( )</span>
+                                    <i ng-repeat-end="" ng-mouseenter="enter($index + 1)" ng-click="rate($index + 1)"
+                                        class="glyphicon ng-scope fi-star"
+                                        ng-class="$index < value &amp;&amp; (r.stateOn || 'glyphicon-star') || (r.stateOff || 'glyphicon-star-empty')"
+                                        ng-attr-title="{{r.title}}"
+                                        title="Not so good - but could play again."></i><!-- end ngRepeat: r in range track by $index --><span
+                                        ng-repeat-start="r in range track by $index"
+                                        class="sr-only ng-binding ng-scope">( )</span>
+                                    <i ng-repeat-end="" ng-mouseenter="enter($index + 1)" ng-click="rate($index + 1)"
+                                        class="glyphicon ng-scope fi-star"
+                                        ng-class="$index < value &amp;&amp; (r.stateOn || 'glyphicon-star') || (r.stateOff || 'glyphicon-star-empty')"
+                                        ng-attr-title="{{r.title}}"
+                                        title="Mediocre - take it or leave it."></i><!-- end ngRepeat: r in range track by $index --><span
+                                        ng-repeat-start="r in range track by $index"
+                                        class="sr-only ng-binding ng-scope">( )</span>
+                                    <i ng-repeat-end="" ng-mouseenter="enter($index + 1)" ng-click="rate($index + 1)"
+                                        class="glyphicon ng-scope fi-star"
+                                        ng-class="$index < value &amp;&amp; (r.stateOn || 'glyphicon-star') || (r.stateOff || 'glyphicon-star-empty')"
+                                        ng-attr-title="{{r.title}}"
+                                        title="Ok - will play if in the mood."></i><!-- end ngRepeat: r in range track by $index --><span
+                                        ng-repeat-start="r in range track by $index"
+                                        class="sr-only ng-binding ng-scope">( )</span>
+                                    <i ng-repeat-end="" ng-mouseenter="enter($index + 1)" ng-click="rate($index + 1)"
+                                        class="glyphicon ng-scope fi-star"
+                                        ng-class="$index < value &amp;&amp; (r.stateOn || 'glyphicon-star') || (r.stateOff || 'glyphicon-star-empty')"
+                                        ng-attr-title="{{r.title}}"
+                                        title="Good - usually willing to play."></i><!-- end ngRepeat: r in range track by $index --><span
+                                        ng-repeat-start="r in range track by $index"
+                                        class="sr-only ng-binding ng-scope">( )</span>
+                                    <i ng-repeat-end="" ng-mouseenter="enter($index + 1)" ng-click="rate($index + 1)"
+                                        class="glyphicon ng-scope fi-star"
+                                        ng-class="$index < value &amp;&amp; (r.stateOn || 'glyphicon-star') || (r.stateOff || 'glyphicon-star-empty')"
+                                        ng-attr-title="{{r.title}}"
+                                        title="Very good - enjoy playing and would suggest it."></i><!-- end ngRepeat: r in range track by $index --><span
+                                        ng-repeat-start="r in range track by $index"
+                                        class="sr-only ng-binding ng-scope">( )</span>
+                                    <i ng-repeat-end="" ng-mouseenter="enter($index + 1)" ng-click="rate($index + 1)"
+                                        class="glyphicon ng-scope fi-star"
+                                        ng-class="$index < value &amp;&amp; (r.stateOn || 'glyphicon-star') || (r.stateOff || 'glyphicon-star-empty')"
+                                        ng-attr-title="{{r.title}}"
+                                        title="Excellent - very much enjoy playing."></i><!-- end ngRepeat: r in range track by $index --><span
+                                        ng-repeat-start="r in range track by $index"
+                                        class="sr-only ng-binding ng-scope">( )</span>
+                                    <i ng-repeat-end="" ng-mouseenter="enter($index + 1)" ng-click="rate($index + 1)"
+                                        class="glyphicon ng-scope fi-star"
+                                        ng-class="$index < value &amp;&amp; (r.stateOn || 'glyphicon-star') || (r.stateOff || 'glyphicon-star-empty')"
+                                        ng-attr-title="{{r.title}}"
+                                        title="Outstanding - will always enjoy playing."></i><!-- end ngRepeat: r in range track by $index -->
+                                </span>
+                            </span> </span> <span class="rating-stars-secondary"> <span
+                                ng-show="collratingctrl.collection.ratingitem.rating > 0 " class="ng-binding ng-hide"> 0
+                                &nbsp; </span> </span>
+                    </div>
+                </div>
+            </span> <span class="visible-xs"> <!-- ngInclude: --><ng-include src="'geekitem_toolbar_small.tpl'"
+                    class="ng-scope">
+                    <div class="toolbar-actions-mobile toolbar-actions-mobile-lg ng-scope">
+                        <!-- hideAdBlock: blockbuyacopy -->
+                        <div class="toolbar-action ng-scope" hide-ad-block="blockbuyacopy">
+                            <!-- ngIf: !geekitemctrl.geekitem.data.item.versioninfo.premiumpreorder || !geekitemctrl.geekitem.data.item.versioninfo.orderurl --><a
+                                ng-if="!geekitemctrl.geekitem.data.item.versioninfo.premiumpreorder || !geekitemctrl.geekitem.data.item.versioninfo.orderurl"
+                                ui-sref="geekitem.overview({'#':'buyacopy'})"
+                                ng-click="geekitemctrl.logEvent( 'GeekItem', 'buyacopy' ); 							 headerctrl.scrollToBuy();"
+                                class="buy-btn btn btn-sm ng-scope" href="/boardgame/224517/brass-birmingham#buyacopy">
+                                <i class="fi-shopping-cart"></i> Buy
+                            </a><!-- end ngIf: !geekitemctrl.geekitem.data.item.versioninfo.premiumpreorder || !geekitemctrl.geekitem.data.item.versioninfo.orderurl -->
+                            <!-- ngIf: geekitemctrl.geekitem.data.item.versioninfo.premiumpreorder && geekitemctrl.geekitem.data.item.versioninfo.orderurl -->
+                        </div> <!-- New Sleeve Action -->
+                        <!-- ngIf: geekitemctrl.geekitem.data.item.cardsets.hasBaseOrExpansionCardSets --><!-- hideAdBlock: blocksleevesad -->
+                        <div ng-if="geekitemctrl.geekitem.data.item.cardsets.hasBaseOrExpansionCardSets"
+                            hide-ad-block="blocksleevesad" class="toolbar-action sleeve-action ng-scope"> <a
+                                class="sleeve-btn btn btn-sm" ui-sref="geekitem.sleeves"
+                                href="/boardgame/224517/brass-birmingham/sleeves"> <svg
+                                    class="svg-inline--fa fa-cards-blank fs-xs" aria-hidden="true" focusable="false"
+                                    data-prefix="far" data-icon="cards-blank" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg="">
+                                    <path fill="currentColor"
+                                        d="M51.8 160.4c-3.7 2.1-4.9 6.8-2.8 10.5l167 289.3c2.1 3.7 6.8 4.9 10.5 2.8L419.4 351.6c3.7-2.1 4.9-6.8 2.8-10.5L255.2 51.8c-2.1-3.7-6.8-4.9-10.5-2.8L51.8 160.4zM7.5 194.9c-15.4-26.6-6.3-60.7 20.4-76.1L220.7 7.5c26.6-15.4 60.7-6.3 76.1 20.4l167 289.3c15.4 26.6 6.2 60.7-20.4 76.1L250.5 504.5c-26.6 15.4-60.7 6.2-76.1-20.4L7.5 194.9zm451.9 226c41.9-24.2 56.3-77.8 32.1-119.8L354.7 64.2c1.7-.2 3.5-.2 5.3-.2H584c30.9 0 56 25.1 56 56V456c0 30.9-25.1 56-56 56H360c-13.7 0-26.2-4.9-35.9-13l135.3-78.1z">
+                                    </path>
+                                </svg><!-- <i class="far fa-cards-blank fs-xs"></i> --> Sleeve </a> </div>
+                        <!-- end ngIf: geekitemctrl.geekitem.data.item.cardsets.hasBaseOrExpansionCardSets --> <span
+                            class="toolbar-action"> <span
+                                item="{objecttype: geekitemctrl.geekitemParams.objecttype, objectid: geekitemctrl.geekitemParams.objectid}"
+                                class="ng-isolate-scope"> <!-- Placeholder button while loading  --> <span no-animate=""
+                                    ng-show="colltoolbarctrl.loading" class="ng-hide"> <button
+                                        class="btn btn-sm btn-primary" disabled=""> <i class="fi-list-thumbnails"></i>
+                                        Loading </button> </span> <span no-animate=""
+                                    ng-switch="colltoolbarctrl.collection.ratingitem.collid || '_undefined_'"
+                                    ng-show="!colltoolbarctrl.loading" class=""> <!-- ngSwitchWhen: _undefined_ --><span
+                                        no-animate="" ng-switch-when="_undefined_" class="ng-scope">
+                                        <!-- ngInclude: 'geekitem_toolbar_collection_empty.tpl' --><span
+                                            ng-include="'geekitem_toolbar_collection_empty.tpl'" class="ng-scope"> <span
+                                                uib-dropdown="" dropdown-append-to-body="" class="ng-scope dropdown">
+                                                <button class="btn btn-sm btn-primary toolbar-action-full" no-animate=""
+                                                    login-required=""
+                                                    ng-click="colltoolbarctrl.editItem( { collid: 0, 				                                          objecttype: colltoolbarctrl.item.objecttype, 				                                          objectid: colltoolbarctrl.item.objectid } )"
+                                                    ng-disabled="colltoolbarctrl.loading"> <i
+                                                        class="fi-list-thumbnails"></i> Add To <span
+                                                        class="hidden-xs">Collection</span> <span
+                                                        class="visible-xs-inline">…</span> </button> </span> </span>
+                                    </span><!-- end ngSwitchWhen: --> <!-- ngSwitchDefault: --> </span> </span> </span>
+                        <span class="toolbar-action">
+                            <subscription btn-style="white"
+                                item="{objecttype: geekitemctrl.geekitemParams.objecttype, objectid: geekitemctrl.geekitemParams.objectid}"
+                                class="ng-isolate-scope">
+                                <div class="game-action game-action-subscribe btn-group dropdown btn-group-sm"
+                                    ng-class="btnGroupClasses" role="group" uib-dropdown="" is-open="status.isOpen"
+                                    ng-mouseover="subscribemouseover=true" ng-mouseleave="subscribemouseover=false"
+                                    uib-tooltip="2,221 Subscribers" tooltip-append-to-body="true"
+                                    tooltip-trigger="mouseenter"> <button class="btn btn-white"
+                                        ng-disabled="!subIsLoaded" ng-show="!subbed" login-required=""
+                                        ng-click="subscribe()"> Subscribe </button> <button
+                                        class="btn btn-white game-action-subscribed ng-hide" ng-disabled="!subIsLoaded"
+                                        ng-show="subbed" ng-click="unsubscribe()"> <span
+                                            class="game-action-subscribed-default"> <i class="fi-check"></i> </span>
+                                        <span class="game-action-subscribed-hover"> <i class="fi-x"></i> </span>
+                                        Subscribed </button> <button class="btn btn-white dropdown-toggle"
+                                        ng-disabled="!subIsLoaded" login-required="" uib-dropdown-toggle=""
+                                        aria-haspopup="true" aria-expanded="false"> <span class="caret"></span> <span
+                                            class="sr-only">Subscribe Options</span> </button>
+                                    <div class="ng-binding"></div>
+                                    <ul uib-dropdown-menu="" class="dropdown-menu">
+                                        <li ng-show="subbed" class="ng-hide"> <a
+                                                href="/subscription/edit/feed/thing/224517"> Edit Subscription </a>
+                                        </li>
+                                        <li ng-show="blockLoaded &amp;&amp; !blocked" class="ng-hide"> <a ng-href=""
+                                                ng-click="block()"> Block </a> </li>
+                                        <li ng-show="blockLoaded &amp;&amp; blocked" class="ng-hide"> <a
+                                                href="/subscription/edit/block/thing/224517"> Edit Block </a> </li>
+                                        <li ng-show="blockLoaded &amp;&amp; blocked" class="ng-hide"> <a ng-href=""
+                                                ng-click="unblock()"> Unblock </a> </li>
+                                    </ul>
+                                </div>
+                            </subscription>
+                        </span>
+                    </div>
+                    <div class="toolbar-actions-mobile toolbar-actions-mobile-sm ng-scope"> <span
+                            class="toolbar-action"> <button type="button" class="btn btn-default ng-isolate-scope"
+                                login-required="" ng-click="collratingctrl.editItemRating()"
+                                item="{objecttype: geekitemctrl.geekitemParams.objecttype, 											  objectid: geekitemctrl.geekitemParams.objectid}"
+                                layout="mobile"> <!-- ngIf: !collratingctrl.collection.ratingitem.rating --><span
+                                    ng-if="!collratingctrl.collection.ratingitem.rating" class="ng-scope"><i
+                                        class="toolbar-action-icon fi-star"></i>Rate
+                                    Game</span><!-- end ngIf: !collratingctrl.collection.ratingitem.rating -->
+                                <!-- ngIf: collratingctrl.collection.ratingitem.rating --> </button> </span> <span
+                            class="toolbar-action"> <geekitem-record-play> <span class="btn-group"> <button
+                                        class="btn btn-sm btn-subtle game-action-play ng-isolate-scope"
+                                        play-recorder-button="" login-required="" item="$recordplayctrl.params"> <i
+                                            class="fi-clipboard-pencil toolbar-action-icon visible-xs"></i> Log Play
+                                    </button> <!-- ngIf: headerctrl.playCountStats.count --> </span>
+                            </geekitem-record-play> </span> <span class="toolbar-action"> <geekitem-fans
+                                class="ng-isolate-scope"> <span class="btn-group" uib-tooltip="4,890 Fans"
+                                    tooltip-append-to-body="true" tooltip-trigger="mouseenter"> <button
+                                        class="btn btn-sm btn-subtle btn-no-text game-action-fan"
+                                        ng-mouseover="fanmouseover=true" ng-mouseleave="fanmouseover=false"
+                                        login-required="" aria-label="become a fan" ng-disabled="$fanctrl.loading"
+                                        ng-click="$fanctrl.toggleFan()"> <i class="fi-heart toolbar-action-icon"
+                                            ng-class="{'is-active':$fanctrl.fanobj.fanid}"></i>
+                                        <!-- ngIf: $fanctrl.buttontype != 'generic' && !$fanctrl.fanobj.fanid --><span
+                                            ng-if="$fanctrl.buttontype != 'generic' &amp;&amp; !$fanctrl.fanobj.fanid"
+                                            class="visible-xs ng-scope">+
+                                            Fan</span><!-- end ngIf: $fanctrl.buttontype != 'generic' && !$fanctrl.fanobj.fanid -->
+                                        <!-- ngIf: $fanctrl.buttontype != 'generic' && !$fanctrl.loading && $fanctrl.fanobj.fanid -->
+                                    </button> <!-- ngIf: ::$fanctrl.fanobj.numfans --><a
+                                        class="btn btn-sm btn-subtle btn-count game-action-play-count ng-binding ng-scope hidden-xs"
+                                        ng-class="{'hidden-xs': $fanctrl.buttontype != 'generic'}"
+                                        ng-if="::$fanctrl.fanobj.numfans" href="/fans/thing/224517"> 4.9K
+                                    </a><!-- end ngIf: ::$fanctrl.fanobj.numfans --> </span> </geekitem-fans> </span>
+                    </div> <!-- ngIf: headerctrl.playCountStats.count -->
+                </ng-include> </span> <span class="hidden-xs"> <!-- ngInclude: --><ng-include
+                    src="'geekitem_toolbar_large.tpl'" class="ng-scope">
+                    <div class="toolbar-actions ng-scope"> <!-- hideAdBlock: blockbuyacopy -->
+                        <div class="toolbar-action ng-scope" hide-ad-block="blockbuyacopy">
+                            <!-- ngIf: !geekitemctrl.geekitem.data.item.versioninfo.premiumpreorder || !geekitemctrl.geekitem.data.item.versioninfo.orderurl --><a
+                                ng-if="!geekitemctrl.geekitem.data.item.versioninfo.premiumpreorder || !geekitemctrl.geekitem.data.item.versioninfo.orderurl"
+                                ui-sref="geekitem.overview({'#':'buyacopy'})"
+                                ng-click="geekitemctrl.logEvent( 'GeekItem', 'buyacopy' ); 							 headerctrl.scrollToBuy();"
+                                class="buy-btn btn btn-sm ng-scope" href="/boardgame/224517/brass-birmingham#buyacopy">
+                                <i class="fi-shopping-cart"></i> Buy <span class="buy-btn-text">a Copy</span>
+                            </a><!-- end ngIf: !geekitemctrl.geekitem.data.item.versioninfo.premiumpreorder || !geekitemctrl.geekitem.data.item.versioninfo.orderurl -->
+                            <!-- ngIf: geekitemctrl.geekitem.data.item.versioninfo.premiumpreorder && geekitemctrl.geekitem.data.item.versioninfo.orderurl -->
+                        </div> <!-- New Sleeve Action -->
+                        <!-- ngIf: geekitemctrl.geekitem.data.item.cardsets.hasBaseOrExpansionCardSets --><!-- hideAdBlock: blocksleevesad -->
+                        <div hide-ad-block="blocksleevesad"
+                            ng-if="geekitemctrl.geekitem.data.item.cardsets.hasBaseOrExpansionCardSets"
+                            class="toolbar-action ng-scope"> <a class="sleeve-btn btn btn-sm" ui-sref="geekitem.sleeves"
+                                href="/boardgame/224517/brass-birmingham/sleeves"> <svg
+                                    class="svg-inline--fa fa-cards-blank fs-xs" aria-hidden="true" focusable="false"
+                                    data-prefix="far" data-icon="cards-blank" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg="">
+                                    <path fill="currentColor"
+                                        d="M51.8 160.4c-3.7 2.1-4.9 6.8-2.8 10.5l167 289.3c2.1 3.7 6.8 4.9 10.5 2.8L419.4 351.6c3.7-2.1 4.9-6.8 2.8-10.5L255.2 51.8c-2.1-3.7-6.8-4.9-10.5-2.8L51.8 160.4zM7.5 194.9c-15.4-26.6-6.3-60.7 20.4-76.1L220.7 7.5c26.6-15.4 60.7-6.3 76.1 20.4l167 289.3c15.4 26.6 6.2 60.7-20.4 76.1L250.5 504.5c-26.6 15.4-60.7 6.2-76.1-20.4L7.5 194.9zm451.9 226c41.9-24.2 56.3-77.8 32.1-119.8L354.7 64.2c1.7-.2 3.5-.2 5.3-.2H584c30.9 0 56 25.1 56 56V456c0 30.9-25.1 56-56 56H360c-13.7 0-26.2-4.9-35.9-13l135.3-78.1z">
+                                    </path>
+                                </svg><!-- <i class="far fa-cards-blank fs-xs"></i> --> Sleeve<span
+                                    class="sleeve-btn-text"> It</span> </a> </div>
+                        <!-- end ngIf: geekitemctrl.geekitem.data.item.cardsets.hasBaseOrExpansionCardSets -->
+                        <div class="toolbar-action"> <span
+                                item="{objecttype: geekitemctrl.geekitemParams.objecttype, objectid: geekitemctrl.geekitemParams.objectid}"
+                                class="ng-isolate-scope"> <!-- Placeholder button while loading  --> <span no-animate=""
+                                    ng-show="colltoolbarctrl.loading" class="ng-hide"> <button
+                                        class="btn btn-sm btn-primary" disabled=""> <i class="fi-list-thumbnails"></i>
+                                        Loading </button> </span> <span no-animate=""
+                                    ng-switch="colltoolbarctrl.collection.ratingitem.collid || '_undefined_'"
+                                    ng-show="!colltoolbarctrl.loading" class=""> <!-- ngSwitchWhen: _undefined_ --><span
+                                        no-animate="" ng-switch-when="_undefined_" class="ng-scope">
+                                        <!-- ngInclude: 'geekitem_toolbar_collection_empty.tpl' --><span
+                                            ng-include="'geekitem_toolbar_collection_empty.tpl'" class="ng-scope"> <span
+                                                uib-dropdown="" dropdown-append-to-body="" class="ng-scope dropdown">
+                                                <button class="btn btn-sm btn-primary toolbar-action-full" no-animate=""
+                                                    login-required=""
+                                                    ng-click="colltoolbarctrl.editItem( { collid: 0, 				                                          objecttype: colltoolbarctrl.item.objecttype, 				                                          objectid: colltoolbarctrl.item.objectid } )"
+                                                    ng-disabled="colltoolbarctrl.loading"> <i
+                                                        class="fi-list-thumbnails"></i> Add To <span
+                                                        class="hidden-xs">Collection</span> <span
+                                                        class="visible-xs-inline">…</span> </button> </span> </span>
+                                    </span><!-- end ngSwitchWhen: --> <!-- ngSwitchDefault: --> </span> </span> </div>
+                        <div class="toolbar-action"> <geekitem-record-play> <span class="btn-group"> <button
+                                        class="btn btn-sm btn-subtle game-action-play ng-isolate-scope"
+                                        play-recorder-button="" login-required="" item="$recordplayctrl.params"> <i
+                                            class="fi-clipboard-pencil toolbar-action-icon visible-xs"></i> Log Play
+                                    </button> <!-- ngIf: headerctrl.playCountStats.count --> </span>
+                            </geekitem-record-play> </div>
+                        <div class="toolbar-action"> <geekitem-fans class="ng-isolate-scope"> <span class="btn-group"
+                                    uib-tooltip="4,890 Fans" tooltip-append-to-body="true" tooltip-trigger="mouseenter">
+                                    <button class="btn btn-sm btn-subtle btn-no-text game-action-fan"
+                                        ng-mouseover="fanmouseover=true" ng-mouseleave="fanmouseover=false"
+                                        login-required="" aria-label="become a fan" ng-disabled="$fanctrl.loading"
+                                        ng-click="$fanctrl.toggleFan()"> <i class="fi-heart toolbar-action-icon"
+                                            ng-class="{'is-active':$fanctrl.fanobj.fanid}"></i>
+                                        <!-- ngIf: $fanctrl.buttontype != 'generic' && !$fanctrl.fanobj.fanid --><span
+                                            ng-if="$fanctrl.buttontype != 'generic' &amp;&amp; !$fanctrl.fanobj.fanid"
+                                            class="visible-xs ng-scope">+
+                                            Fan</span><!-- end ngIf: $fanctrl.buttontype != 'generic' && !$fanctrl.fanobj.fanid -->
+                                        <!-- ngIf: $fanctrl.buttontype != 'generic' && !$fanctrl.loading && $fanctrl.fanobj.fanid -->
+                                    </button> <!-- ngIf: ::$fanctrl.fanobj.numfans --><a
+                                        class="btn btn-sm btn-subtle btn-count game-action-play-count ng-binding ng-scope hidden-xs"
+                                        ng-class="{'hidden-xs': $fanctrl.buttontype != 'generic'}"
+                                        ng-if="::$fanctrl.fanobj.numfans" href="/fans/thing/224517"> 4.9K
+                                    </a><!-- end ngIf: ::$fanctrl.fanobj.numfans --> </span> </geekitem-fans> </div>
+                        <div class="toolbar-action">
+                            <subscription
+                                item="::{objecttype: geekitemctrl.geekitemParams.objecttype, objectid: geekitemctrl.geekitemParams.objectid}"
+                                btn-size="sm" btn-style="subtle" class="ng-isolate-scope">
+                                <div class="game-action game-action-subscribe btn-group dropdown btn-group-sm"
+                                    ng-class="btnGroupClasses" role="group" uib-dropdown="" is-open="status.isOpen"
+                                    ng-mouseover="subscribemouseover=true" ng-mouseleave="subscribemouseover=false"
+                                    uib-tooltip="2,221 Subscribers" tooltip-append-to-body="true"
+                                    tooltip-trigger="mouseenter"> <button class="btn btn-subtle"
+                                        ng-disabled="!subIsLoaded" ng-show="!subbed" login-required=""
+                                        ng-click="subscribe()"> Subscribe </button> <button
+                                        class="btn btn-subtle game-action-subscribed ng-hide" ng-disabled="!subIsLoaded"
+                                        ng-show="subbed" ng-click="unsubscribe()"> <span
+                                            class="game-action-subscribed-default"> <i class="fi-check"></i> </span>
+                                        <span class="game-action-subscribed-hover"> <i class="fi-x"></i> </span>
+                                        Subscribed </button> <button class="btn btn-subtle dropdown-toggle"
+                                        ng-disabled="!subIsLoaded" login-required="" uib-dropdown-toggle=""
+                                        aria-haspopup="true" aria-expanded="false"> <span class="caret"></span> <span
+                                            class="sr-only">Subscribe Options</span> </button>
+                                    <div class="ng-binding"></div>
+                                    <ul uib-dropdown-menu="" class="dropdown-menu">
+                                        <li ng-show="subbed" class="ng-hide"> <a
+                                                href="/subscription/edit/feed/thing/224517"> Edit Subscription </a>
+                                        </li>
+                                        <li ng-show="blockLoaded &amp;&amp; !blocked" class="ng-hide"> <a ng-href=""
+                                                ng-click="block()"> Block </a> </li>
+                                        <li ng-show="blockLoaded &amp;&amp; blocked" class="ng-hide"> <a
+                                                href="/subscription/edit/block/thing/224517"> Edit Block </a> </li>
+                                        <li ng-show="blockLoaded &amp;&amp; blocked" class="ng-hide"> <a ng-href=""
+                                                ng-click="unblock()"> Unblock </a> </li>
+                                    </ul>
+                                </div>
+                            </subscription>
+                        </div>
+                    </div>
+                </ng-include> </span> </div>
+        <div class="game-header-secondary-actions hidden-game-header-collapsed"> <button class="btn btn-xs btn-white"
+                edit-geek-item-settings="" login-required=""> <i class="fi-widget"></i> Settings </button> <button
+                class="btn btn-xs btn-white" ng-click="shareactive=!shareactive" ng-class="{'is-active':shareactive}">
+                <i class="fi-share"></i> Share <span class="caret"></span> </button> <a
+                class="btn btn-xs btn-white btn-no-text" target="_blank" href="/rss/thing/224517"> <i
+                    class="fi-rss"></i> <span class="sr-only">RSS Feed</span> </a> <a
+                href="/item/correction/boardgame/224517" ng-href="/item/correction/boardgame/224517"
+                class="btn btn-xs btn-white"> Edit </a> <span class="game-header-admin ng-hide" show-access="itemmgr"
+                foo="bar" access-objecttype="thing" access-objectid="224517"> <a class="btn btn-xs btn-white"
+                    ui-sref="geekitem.edit" href="/boardgame/224517/brass-birmingham/edit"> Admin Edit </a> </span>
+            <!-- ngIf: shareactive --> </div>
+    </div>
+</div>
