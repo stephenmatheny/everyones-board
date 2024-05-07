@@ -6,6 +6,7 @@ $password = "Co4jW2GR%2QzWnC@";
 $database = "board_game";
 
 error_reporting(E_ERROR | E_PARSE);
+ini_set('max_execution_time', 21600);
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
@@ -23,7 +24,7 @@ if ($conn->connect_error) {
 
 // Function to scrape and seed data
 function seedGames($conn) {
-    $page = 1;
+    $page = 11;
     while($page <= 1542) {
         // URL to scrape data from
         $url = "https://boardgamegeek.com/browse/boardgame/page/$page";
@@ -103,18 +104,22 @@ function seedGames($conn) {
 
                         // Iterate through meta tags
                         foreach ($metaTags as $meta) {
-                            // Check if the meta tag has the name attribute "twitter:image:src"
-                            if ($meta->getAttribute('property') === 'og:image') {
-                                // Get the content attribute value
-                                $otherInfo['imageUrl'] = $meta->getAttribute('content');
-                            }
-                            if($meta->getAttribute('property') === 'og:title') {
-                                // Get the content attribute value
-                                $otherInfo['title'] = $meta->getAttribute('content');
-                            }
-                            if($meta->getAttribute('property') === 'og:description') {
-                                // Get the content attribute value
-                                $otherInfo['description'] = $meta->getAttribute('content');
+                            try {
+                                // Check if the meta tag has the name attribute "twitter:image:src"
+                                if ($meta->getAttribute('property') === 'og:image') {
+                                    // Get the content attribute value
+                                    $otherInfo['imageUrl'] = $meta->getAttribute('content');
+                                }
+                                if($meta->getAttribute('property') === 'og:title') {
+                                    // Get the content attribute value
+                                    $otherInfo['title'] = $meta->getAttribute('content');
+                                }
+                                if($meta->getAttribute('property') === 'og:description') {
+                                    // Get the content attribute value
+                                    $otherInfo['description'] = $meta->getAttribute('content');
+                                }
+                            } catch (e) {
+                                echo "$gameId,";
                             }
                         }
 
@@ -129,8 +134,10 @@ function seedGames($conn) {
             }
         }
         // fclose($file);
+        echo "\nEND OF PAGE: $page\n";
         $page++;
     }
+    echo "\ncomplete\n";
     return;
 }
 
@@ -188,7 +195,7 @@ function insertGameData($conn, $xml, $otherInfo) {
         if ($stmt->execute()) {
 
         } else {
-            echo "$gameTitle,";
+
         }
     } catch (e) {
         return;
